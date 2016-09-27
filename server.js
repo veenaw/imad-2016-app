@@ -87,7 +87,7 @@ app.get('/', function (req, res) { // exectutes when ge request is made to '/'
 
 app.get('/:articleName',function(req,res){
     var articleName = req.params.articleName; //  functinality of express framework
-  res.sendFile(createTemplate(articles[articleName]));
+  res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {  // similar as 8
