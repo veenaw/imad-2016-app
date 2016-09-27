@@ -5,45 +5,46 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne={
-    title: 'Article One! Veena Wagle',
-    heading: 'Article one',
-    date: 'Sep 5, 2016',
-    content: `
-            <p>
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            </p>
-            <p>
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            </p>
-            <p>
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-            </p>`
-}
+var articles = {
+     articleOne:{
+        title: 'Article One! Veena Wagle',
+        heading: 'Article one',
+        date: 'Sep 5, 2016',
+        content: `
+                <p>
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                </p>
+                <p>
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                </p>
+                <p>
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
+                </p>`
+    },
 
-var articleTwo={
-    title: 'Article Two! Veena Wagle',
-    heading: 'Article Two',
-    date: 'Sep 6, 2016',
-    content: `
-            <p>
-            This is a content for second article.
-            </p>`
-}
+    articleTwo:{
+        title: 'Article Two! Veena Wagle',
+        heading: 'Article Two',
+        date: 'Sep 6, 2016',
+        content: `
+                <p>
+                This is a content for second article.
+                </p>`
+    },
 
-var articleThree={
-    title: 'Article Three! Veena Wagle',
-    heading: 'Article Three',
-    date: 'Sep 7, 2016',
-    content: `
-            <p>
-            This is a content for third article.
-            </p>
-            `
-}
+    articleThree : {
+        title: 'Article Three! Veena Wagle',
+        heading: 'Article Three',
+        date: 'Sep 7, 2016',
+        content: `
+                <p>
+                This is a content for third article.
+                </p>
+                `
+}};
 
 function createTemplate(data) {
     var title=data.title;
