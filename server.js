@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-     articleOne:{
+     'article-one':{
         title: 'Article One! Veena Wagle',
         heading: 'Article one',
         date: 'Sep 5, 2016',
@@ -25,7 +25,7 @@ var articles = {
                 </p>`
     },
 
-    articleTwo:{
+    'article-two':{
         title: 'Article Two! Veena Wagle',
         heading: 'Article Two',
         date: 'Sep 6, 2016',
@@ -35,7 +35,7 @@ var articles = {
                 </p>`
     },
 
-    articleThree : {
+    'article-three' : {
         title: 'Article Three! Veena Wagle',
         heading: 'Article Three',
         date: 'Sep 7, 2016',
@@ -85,8 +85,9 @@ app.get('/', function (req, res) { // exectutes when ge request is made to '/'
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-  res.sendFile(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    var articleName = req.params.articleName; //  functinality of express framework
+  res.sendFile(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function(req,res){
