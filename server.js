@@ -10,7 +10,8 @@ app.get('/', function (req, res) { // exectutes when ge request is made to '/'
 });
 
 app.get('/article-one', function(req,res){
-res.send('Article one requested and will be served here');
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+
 });
 
 app.get('/article-two', function(req,res){
