@@ -4,6 +4,8 @@ var element = document.getElementById('main-text');
 
 element.innerHTML = 'New Value';
 
+var marginLeft=0;
+
 function moveRight(){
 marginLeft+=10;
 img.style.marginLeft= marginLeft+'px';
