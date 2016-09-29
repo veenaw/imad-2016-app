@@ -1,13 +1,16 @@
 //counter code
 var button = document.getElementById('count');
-button.onclick = function(){
+button.onclick = function()
+{
     //make a request to counter endpoint
     var request =new XMLHttpRequest();
     
     
     // capture the response and store in a variable.
-    request.onreadystatechange = function(){
-        if(request.readyState == XMLHttpRequest.DONE){
+    request.onreadystatechange = function()
+    {
+        if(request.readyState == XMLHttpRequest.DONE)
+        {
             //take some action
             if(request.status ==200)
             {
