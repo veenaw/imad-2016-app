@@ -81,6 +81,13 @@ var htmlTemplate=`
 return htmlTemplate;
 }
 
+var counter=0;
+
+app.get('/counter', function(req,res){
+    counter=ounter+1;
+    res.send(counter.toString());
+});
+
 app.get('/', function (req, res) { // exectutes when ge request is made to '/'
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
