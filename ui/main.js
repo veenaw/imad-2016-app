@@ -16,11 +16,6 @@ button.onclick = function(){
                 span.innerHTML= counter.toString();
             }
         }
-    } 
+    }; 
     
-    //Render the variable to correct span
-    counter= counter +1;
-    
-    var span= document.getElementById('count');
-    span.innerHTML= counter.toString();
-}
+};
