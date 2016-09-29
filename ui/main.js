@@ -2,7 +2,7 @@
 var button = document.getElementById('count');
 button.onclick = function()
 {
-    //make a request to counter endpoint
+    //create request to counter endpoint
     var request =new XMLHttpRequest();
     
     
