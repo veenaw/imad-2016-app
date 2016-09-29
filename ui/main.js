@@ -17,5 +17,7 @@ button.onclick = function(){
             }
         }
     }; 
-    
+    //make a request
+    request.open('GET','http://veenaw.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
