@@ -74,7 +74,7 @@ app.get('/test-db',function(req,res){
 });
 
 app.get('/articles/:articleName',function(req,res){
-    var articleName = req.params.articleName; //  functinality of express framework
+    //var articleName = req.params.articleName; //  functinality of express framework
    
  pool.query("SELECT * FROM article WHERE title = $1"+ [req.params.articleName], function(err, result){
      if(err){
