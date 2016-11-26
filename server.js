@@ -15,25 +15,6 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles = {
-     'article-one':{
-        title: 'Article One! Veena Wagle',
-        heading: 'Article one',
-        date: 'Sep 5, 2016',
-        content: `
-                <p>
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                </p>
-                <p>
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                </p>
-                <p>
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                This is a content.This is a content. This is a content.This is a content.This is a content. This is a content. This is a content.This is a content.This is a content.This is a content.
-                </p>`
-    },
-
     'article-two':{
         title: 'Article Two! Veena Wagle',
         heading: 'Article Two',
