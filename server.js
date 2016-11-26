@@ -113,8 +113,24 @@ app.get('/test-db',function(req,res){
     });
 });
 
-app.get('/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
     var articleName = req.params.articleName; //  functinality of express framework
+   
+ pool.query("SELECT * FROM article WHERE title ="+ articleName, function(err, result){
+     if(err){
+         res.status(500).send(err.toString());
+     }
+     else
+     {
+         if(result.rows.length==0){
+             res.status(400).send('Article not found');
+         }else
+         {
+             var  articleData =result.rows[0];
+             res.send(createTemplate(articleData));
+         }
+     }
+ })
   res.send(createTemplate(articles[articleName]));
 });
 
